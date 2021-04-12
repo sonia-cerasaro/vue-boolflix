@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue-Boolflix</title>
+    <link rel="stylesheet" href="./assets/master.css">
+  </head>
+  <body>
+    <div id="#root">
+
+      <input type="text" name="" value="">
+      <button
+
+      class="search" type="button" name="button">search</button>
+
+      <ol>
+        <li v-for='movie in movies'>
+        {{ movie }}
+        </li>
+      </ol>
+
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+    <script src="./assets/main.js" charset="utf-8"></script>
+  </body>
+</html>
