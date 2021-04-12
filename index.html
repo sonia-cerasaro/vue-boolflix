@@ -20,11 +20,16 @@
       <ul>
         <li v-for='(movie, i) in selectedMovies'>
         {{ movie.title }}
-        <a @click='currentIndex = i'
-        href="file:///Users/fortunato/Desktop/GENERAL%20FOLDER/BOOLEAN/Repository/vue-boolflix/info.html" class="button">info</a>
 
+        <button @click="currentIndex = i" type="button" name="button">clicca</button>
         </li>
       </ul>
+
+      <h1 class="title"> {{ selectedMovies[currentIndex].title }} </h1>
+      <p class="language"><b>language:</b> {{ selectedMovies[currentIndex].original_language }} </p>
+      <p class="voto"><b>vote:</b> {{ selectedMovies[currentIndex].vote_average }} </p>
+
+
 
 
 

@@ -14,7 +14,6 @@ var app = new Vue ({
       this.movies = response.data.results;
       this.selectedMovies = this.movies;
 
-      console.log(response.data.results);
     })
   },
   methods: {
@@ -29,7 +28,5 @@ var app = new Vue ({
         }
       });
     },
-
-
   }
 });
