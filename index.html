@@ -21,13 +21,15 @@
         <li v-for='(movie, i) in selectedMovies'>
         {{ movie.title }}
 
-        <button @click="currentIndex = i" type="button" name="button">clicca</button>
+        <button @click="setCurrentInfo(i)" type="button" name="button">clicca</button>
         </li>
       </ul>
 
-      <h1 class="title"> {{ selectedMovies[currentIndex].title }} </h1>
-      <p class="language"><b>language:</b> {{ selectedMovies[currentIndex].original_language }} </p>
-      <p class="voto"><b>vote:</b> {{ selectedMovies[currentIndex].vote_average }} </p>
+      <h1 class="title"> {{ title }} </h1>
+      <p class="language"><b>language:</b> {{ language }}
+        <img :src="flagPath" alt="">
+      </p>
+      <p class="vote"><b>vote:</b> {{ vote }} </p>
 
 
 
