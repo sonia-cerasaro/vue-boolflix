@@ -29,13 +29,12 @@
         <div class="card_container">
           <div class="flip-card"
             v-for='(movie, i) in selectedMovies'>
-            {{ getTitle(movie) }}
-            <button @click="setCurrentInfo(i)" type="button" name="button">
-              clicca
-            </button>
+
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                 <!-- Qui va la cover -->
+
+                <img :src="getPosterImagePath(movie)" alt="">
+
               </div>
               <div class="flip-card-back">
 
@@ -43,18 +42,19 @@
                   <div class="card-info">
                     <span class="original title">
                     </span>
-                    <!-- Da qui le info -->
+
                     <span class="title">
-                      {{ title }}
+                      {{ getTitle(movie) }}
                     </span>
 
                     <span class="language">
-                       {{ language }}
-                      <img :src="flagPath" alt="">
+                       {{ movie.original_language }}
+
+                      <img :src="getFlagImagePath(movie)" alt="">
                     </span>
 
                     <span class="vote">
-                      {{ vote }}
+                      {{ movie.vote_average }}
                     </span>
 
                   </div>
@@ -65,6 +65,7 @@
         </div>
       </main>
 
+      <!-- /6kbAMLteGO8yyewYau6bJ683sw7.jpg -->
 
 
       <!-- <h1 class="title"> {{ title }} </h1>
