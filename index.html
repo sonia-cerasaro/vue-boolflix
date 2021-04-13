@@ -9,17 +9,30 @@
   <body>
     <div id="root">
 
-      <input type="text" name="" value=""
-      v-model="selectedMovie">
+      <header>
+        <div class="nav_container">
 
-      <button v-on:click="setSelectedMovies()"
-      class="search" type="button" name="button">
-      search
-     </button>
+          <div class="logo_container">
+            <img class="logo" src="./assets/img/netflix-logo.png" alt="">
+          </div>
+
+
+          <div class="input_container">
+            <input class="search_bar_input" type="text" name="" value=""
+            v-model="selectedMovie">
+            <button v-on:click="setSelectedMovies()"
+            class="search" type="button" name="button">
+            search
+           </button>
+          </div>
+
+        </div>
+      </header>
+
 
       <ul>
         <li v-for='(movie, i) in selectedMovies'>
-        {{ movie.title }}
+        {{ getTitle(movie) }}
 
         <button @click="setCurrentInfo(i)" type="button" name="button">clicca</button>
         </li>
@@ -30,10 +43,6 @@
         <img :src="flagPath" alt="">
       </p>
       <p class="vote"><b>vote:</b> {{ vote }} </p>
-
-
-
-
 
     </div>
 

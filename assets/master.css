@@ -1,3 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.nav_container {
+  width: 100vw;
+  height: 10vh;
+  background-color: #4e4e51;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_container {
+  width: 100px;
+  height: 50px;
+  margin-left: 10px;
+}
+
+img.logo {
+  width: 50px;
+  margin: auto;
+  position: relative;
+  top: 25%;
+}
+
+input.search_bar_input {
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+button.search {
+  height: 20px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
 .button {
     display: block;
     width: 50px;
