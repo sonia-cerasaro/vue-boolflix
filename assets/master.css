@@ -41,19 +41,6 @@ button.search {
   margin-right: 10px;
 }
 
-.button {
-    display: block;
-    width: 50px;
-    height: 25px;
-    background: #4E9CAF;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    line-height: 25px;
-}
-
 /* CARD CONTAINER */
 .card_container:after {
   content: "";
@@ -103,7 +90,6 @@ button.search {
   background-color: transparent;
   color: black;
   width: 100%;
-  padding-top: 100%;
   border-radius: 15px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -136,4 +122,30 @@ button.search {
 .vote {
   font-size: 14px;
   font-style: italic;
+}
+
+/* STARS */
+
+.star-rating {
+  align-items: center;
+  font-size: 3em;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.back-stars {
+  display: flex;
+    color: #bb5252;
+    position: relative;
+    text-shadow: 4px 4px 10px #843a3a;
+}
+
+.front-stars {
+  display: flex;
+    color: #FFBC0B;
+    overflow: hidden;
+    position: absolute;
+    text-shadow: 2px 2px 5px #d29b09;
+    top: 0;
+    transition: all .5s
 }
