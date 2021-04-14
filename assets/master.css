@@ -5,12 +5,15 @@
   box-sizing: border-box;
 }
 
-/* NAV */
+body {
+  background-color: #000;
+}
 
+/* NAV */
 .nav_container {
   width: 100vw;
   height: 10vh;
-  background-color: #4e4e51;
+  background-color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -23,29 +26,37 @@
 }
 
 img.logo {
-  width: 50px;
-  margin: auto;
-  position: relative;
-  top: 25%;
+  width: 100px;
+  margin-left: 25px;
+
 }
 
 input.search_bar_input {
-  height: 20px;
-  border-radius: 5px;
-  margin-right: 5px;
+  height: 25px;
+  padding: 10px;
+  border-radius: 3px;
 }
 
 button.search {
+  background-color: transparent;
   height: 20px;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 25px;
+}
+
+button.search > i {
+  color: #fff;
+}
+
+button.search :hover {
+  cursor: pointer;
 }
 
 /* CARD CONTAINER */
 .card_container:after {
   content: "";
   flex: auto;
-  width: 200px;
+  /* width: 200px; */
 }
 
 .card_container{
@@ -56,9 +67,10 @@ button.search {
 }
 
 .flip-card {
-  width: 200px;
-  height: 200px;
+  width: 154px;
+  height: 230px;
   perspective: 1000px;
+
 }
 
 /* This container is needed to position the front and back side */
@@ -76,7 +88,6 @@ button.search {
   transform: rotateY(180deg);
 }
 
-/* Position the front and back side */
 .flip-card-front, .flip-card-back {
   position: absolute;
   width: 100%;
@@ -85,67 +96,66 @@ button.search {
   backface-visibility: hidden;
 }
 
-/* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: transparent;
-  color: black;
   width: 100%;
-  border-radius: 15px;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-/* Style the back side */
 .flip-card-back {
   width: 100%;
-  border-radius: 10px;
-  background-color: #3f3b6b;
+  background-color: #000;
+  border: white solid 1px;
   color: white;
   transform: rotateY(180deg);
 }
 
 .card-info{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+span.title {
+  font-size: 1em;
   display: flex;
-  flex-direction: column;
-  text-align: center;
 }
 
-.title {
-  font-size: 20px;
-  font-weight: bold;
+span.language {
+  font-size: 1em;
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
-.vote {
-  font-size: 14px;
-  font-style: italic;
+span.vote {
+  font-size: 1em;
+  display: flex;
+}
+
+img.flag {
+  width: 2em;
 }
 
 /* STARS */
 
 .star-rating {
   align-items: center;
-  font-size: 3em;
+  font-size: 1em;
   justify-content: center;
-  margin-top: 50px;
+
 }
 
 .back-stars {
   display: flex;
-    color: #bb5252;
-    position: relative;
-    text-shadow: 4px 4px 10px #843a3a;
+  color: #bb5252;
+  position: relative;
 }
 
 .front-stars {
   display: flex;
-    color: #FFBC0B;
-    overflow: hidden;
-    position: absolute;
-    text-shadow: 2px 2px 5px #d29b09;
-    top: 0;
-    transition: all .5s
+  color: #FFBC0B;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transition: all .5s;
 }

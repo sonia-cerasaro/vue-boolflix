@@ -40,7 +40,7 @@ var app = new Vue ({
       return `https://image.tmdb.org/t/p/w154/${currentMovie.poster_path}`;
     },
     getRate: function (currentMovie) {
-      var percentage = currentMovie.vote_average * 10;
+      const percentage = currentMovie.vote_average * 10;
       return percentage + '%';
     },
     getTitle: function (obj) {

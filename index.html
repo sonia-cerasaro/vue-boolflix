@@ -16,11 +16,12 @@
             <img class="logo" src="./assets/img/netflix-logo.png" alt="">
           </div>
           <div class="input_container">
-            <input class="search_bar_input" type="text" name="" value=""
+            <input class="search_bar_input" type="text" name="titles" value="titles"
+            placeholder="Titles, People, Genres..."
             v-model="selectedMovie">
             <button v-on:click="setSelectedMovies()"
             class="search" type="button" name="button">
-            search
+            <i class="fas fa-search"></i>
            </button>
           </div>
         </div>
@@ -41,22 +42,20 @@
 
                 <div class="card-container-info">
                   <div class="card-info">
-                    <span class="original title">
-                    </span>
 
                     <span class="title">
-                      {{ getTitle(movie) }}
+                      <p>Title:</p>
+                      <b>{{ getTitle(movie) }}</b>
                     </span>
 
                     <span class="language">
-                       {{ movie.original_language }}
-
-                      <img :src="getFlagImagePath(movie)" alt="">
+                       <p>Language:</p>
+                      <img class="flag" :src="getFlagImagePath(movie)" alt="">
                     </span>
 
                     <span class="vote">
-                      {{ movie.vote_average }}
-                      <div class="star-rating" title="">
+                      <p>Vote:</p>
+                      <div class="star-rating">
                         <div class="back-stars">
                             <i class="fa fa-star" aria-hidden="true"></i>
                             <i class="fa fa-star" aria-hidden="true"></i>
@@ -73,7 +72,6 @@
                             </div>
                         </div>
                       </div>
-
                     </span>
 
                   </div>
@@ -83,15 +81,6 @@
           </div>
         </div>
       </main>
-
-      <!-- /6kbAMLteGO8yyewYau6bJ683sw7.jpg -->
-
-
-      <!-- <h1 class="title"> {{ title }} </h1>
-      <p class="language"><b>language:</b> {{ language }}
-        <img :src="flagPath" alt="">
-      </p>
-      <p class="vote"><b>vote:</b> {{ vote }} </p> -->
 
     </div>
 
