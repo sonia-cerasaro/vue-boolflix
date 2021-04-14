@@ -3,6 +3,7 @@
   padding: 0;
   border: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -111,17 +112,24 @@ button.search :hover {
 }
 
 .card-info{
-  margin-top: 15px;
-  margin-left: 15px;
+  margin: 15px 15px 15px;
+
 }
 
 span.title {
-  font-size: 1em;
+  font-size: 12px;
   display: flex;
 }
 
+span.original-titleName {
+  font-size: 12px;
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 span.language {
-  font-size: 1em;
+  font-size: 12px;
   display: flex;
   margin-top: 15px;
   margin-bottom: 15px;
@@ -129,6 +137,11 @@ span.language {
 
 span.vote {
   font-size: 1em;
+  display: flex;
+}
+
+span.vote > p {
+  font-size: 12px;
   display: flex;
 }
 

@@ -50,5 +50,12 @@ var app = new Vue ({
         return obj.name;
       }
     },
+    getOriginalTitle: function (obj) {
+      if (obj.original_title) {
+        return obj.original_title;
+      }else{
+        return obj.original_name;
+      }
+    },
   }
 });
