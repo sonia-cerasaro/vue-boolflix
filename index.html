@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue-Boolflix</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
@@ -13,21 +14,70 @@
     <div id="root">
 
       <header>
-        <div class="nav_container">
-          <div class="logo_container">
-            <img class="logo" src="./assets/img/netflix-logo.png" alt="">
-          </div>
-          <div class="input_container">
-            <input class="search_bar_input" type="text" name="titles" value="titles"
-            placeholder="Titles, People, Genres..."
-            v-model="selectedMovie">
-            <button v-on:click="setSelectedMovies()"
-            class="search" type="button" name="button">
-            <i class="fas fa-search"></i>
-           </button>
-          </div>
+    <div class="nav_container">
+      <div class="nav_container_right">
+        <div class="logo_container">
+          <img class="logo" src="./assets/img/netflix-logo.png" alt="">
         </div>
-      </header>
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">TV Shows</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New & popular</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav_container_left">
+
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">
+              KIDS
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fas fa-gift"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="far fa-bell"></i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">New & popular</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">
+
+
+            </a>
+          </li>
+        </ul>
+
+        <div class="input_container">
+          <input class="search_bar_input" type="text" name="titles" value="titles"
+          placeholder="Titles, People, Genres..."
+          v-model="selectedMovie"
+          @keyup.enter="setSelectedMovies()">
+          <button v-on:click="setSelectedMovies()"
+          class="search" type="button" name="button">
+          <i class="fas fa-search"></i>
+         </button>
+        </div>
+
+      </div>
+    </div>
+  </header>
 
       <main>
         <div class="card_container">

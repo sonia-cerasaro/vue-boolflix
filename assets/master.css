@@ -20,19 +20,31 @@ body {
   align-items: center;
 }
 
+.nav_container_right {
+  display: flex;
+  align-items: center;
+}
+
+.nav_container_left {
+  display: flex;
+  align-items: center;
+}
+
 .logo_container {
   width: 100px;
   height: 50px;
+  margin-bottom: 10px;
   margin-left: 10px;
+  margin-right: 30px;
 }
 
 img.logo {
   width: 100px;
   margin-left: 25px;
-
 }
 
 input.search_bar_input {
+  width: 180px;
   height: 25px;
   padding: 10px;
   border-radius: 3px;
@@ -50,6 +62,7 @@ button.search > i {
 }
 
 button.search :hover {
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -112,7 +125,7 @@ button.search :hover {
 }
 
 .card-info{
-  margin: 15px 15px 15px;
+  margin: 5px;
 
 }
 
@@ -124,15 +137,15 @@ span.title {
 span.original-titleName {
   font-size: 12px;
   display: flex;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 span.language {
   font-size: 12px;
   display: flex;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 span.vote {
